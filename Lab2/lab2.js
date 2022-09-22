@@ -1,15 +1,15 @@
 function specialYears(inputYear) {
     const firstTwoDigitYear =  Number(String(inputYear).substring(0,2)); 
     let addValue = 0;
-    if(firstTwoDigitYear == 16){
+    if(firstTwoDigitYear == 16) {
         addValue  = 6;
-    }else if(firstTwoDigitYear == 17){
+    }else if(firstTwoDigitYear == 17) {
         addValue = 4;
-    }else if(firstTwoDigitYear == 18){
+    }else if(firstTwoDigitYear == 18) {
         addValue = 2;
-    }else if(firstTwoDigitYear == 20){
+    }else if(firstTwoDigitYear == 20) {
         addValue = 6
-    }else if(firstTwoDigitYear == 21){
+    }else if(firstTwoDigitYear == 21) {
         addValue = 4;
     }else{
         addValue = 0;
@@ -18,7 +18,7 @@ function specialYears(inputYear) {
 }
 
 
-function getDayOfTheWeek(year,month,day){
+function getDayOfTheWeek(year,month,day) {
     const lastTwoDigitYear = String(year).substring(2); 
     const sevensInDigit = Math.trunc(Number(lastTwoDigitYear) / 12); // step1
     const reminderTwelve = Number(lastTwoDigitYear) % 12; // step2
@@ -26,7 +26,7 @@ function getDayOfTheWeek(year,month,day){
     const monthCode = {January:1,February:4,March:4,April:0,May:2,June:5,July:0,August:3,September:6,October:1,November:4,December:6};
     let specialMonthInLeapYear = 0;
 
-    if(isLeapYear(year) == true && (month == "January" || month == "February")){
+    if(isLeapYear(year) == true && (month == "January" || month == "February")) {
         specialMonthInLeapYear = -1; 
     }else{
         specialMonthInLeapYear = 0; 
@@ -39,8 +39,8 @@ function getDayOfTheWeek(year,month,day){
     return dayOfWeek;
 }
 
-function isLeapYear(year){
-    if(0 == year % 400 || (0 == year % 4 && 0 != year % 100)){
+function isLeapYear(year) {
+    if(0 == year % 400 || (0 == year % 4 && 0 != year % 100)) {
         return true;
     }else{
         return false;
@@ -51,8 +51,8 @@ function makeCalendar() {
     const monthDays = [31,28,31,30,31,30,31,31,30,31,30,31];
     const months = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
-    for (i = 0; i<= monthDays.length - 1; i++){
-        for (j = 1; j <= monthDays[i]; j++){
+    for (i = 0; i<= monthDays.length - 1; i++) {
+        for (j = 1; j <= monthDays[i]; j++) {
             console.log(`${j}-${i+1}-2022 is ${getDayOfTheWeek(2022,months[i],j)}`);
         }
     }
