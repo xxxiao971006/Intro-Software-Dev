@@ -6,7 +6,7 @@ const userYear = readline.questionInt("Enter a Year: ");
 const userMonth = readline.question("Enter a month: ");
 const userDate = readline.questionInt("Enter a date: ");
 
-function getDayOfTheWeekForUserDate(){
+function getDayOfTheWeekForUserDate() {
   console.log(`The day ${userYear}-${userMonth}-${userDate} is a ${getDayOfTheWeek(userYear, userMonth, userDate)}.`);
 }
 
