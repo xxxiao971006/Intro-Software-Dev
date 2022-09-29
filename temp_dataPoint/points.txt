@@ -1,0 +1,2 @@
+The user input is (10, 5), (2, 9)
+The distance between your two points: (10, 5), (2, 9) is 8.94427190999916
